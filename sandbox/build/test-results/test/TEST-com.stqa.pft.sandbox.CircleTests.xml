@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.stqa.pft.sandbox.CircleTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-19T02:47:44" hostname="DESKTOP-TPQRM92" time="0.007">
+  <properties/>
+  <testcase name="testArea" classname="com.stqa.pft.sandbox.CircleTests" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

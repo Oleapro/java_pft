@@ -34,7 +34,7 @@ public class GroupCreationTest {
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
-
+   //Moved login part to before method section
   @Test
   public void testGroupCreation() throws Exception {
     driver.findElement(By.linkText("groups")).click();

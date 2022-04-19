@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dee5f9f-2545-4e9d-b4f5-2f61bec7f246" name="Changes" comment="" />
+    <list default="true" id="5dee5f9f-2545-4e9d-b4f5-2f61bec7f246" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/src/test/java/com/stqa/pft/addressbook/GroupCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/src/test/java/com/stqa/pft/addressbook/GroupCreationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

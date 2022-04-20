@@ -9,8 +9,8 @@ public class MyFirstProgram {
 		hello("Olga");
 
 
-		Point p1 = new Point(1,1);
-		Point p2 = new Point(4,4);
+		Point p1 = new Point(5,8);
+		Point p2 = new Point(4,3);
 		System.out.println("Distance between points p1 and p2 = " + p1.distance(p2));
 		//System.out.println("Distance between points p2 and p1 = " + p2.distance(p1));
 

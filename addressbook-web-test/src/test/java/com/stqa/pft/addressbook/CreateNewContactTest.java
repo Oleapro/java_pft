@@ -1,12 +1,10 @@
-package com.example.tests;
+package com.stqa.pft.addressbook;
 
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 
 public class CreateNewContactTest {
   private WebDriver driver;
@@ -14,40 +12,67 @@ public class CreateNewContactTest {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
-  @BeforeClass(alwaysRun = true)
+  @BeforeClass
+  public void setUpClass(){System.setProperty("webdriver.gecko.driver", "c:\\WebDrivers\\geckodriver.exe");}
+
+  @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    login("admin", "secret");
   }
 
   @Test
   public void testCreateNewContact() throws Exception {
-    driver.get("http://localhost/addressbook/");
-    driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.name("pass")).click();
-    driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
-    driver.findElement(By.xpath("//input[@value='Login']")).click();
-    driver.findElement(By.linkText("add new")).click();
+    initNewContactCreation();
+    fill_inNewContactForm(new NewContactData("Olga", "Pro", "2064 Arbor Springs Way Buford GA 30519", "5186189573"));
+    submitContactCreation();
+    return_toHomePage();
+    System.out.println("contact created");
+    initNewContactCreation();
+    fill_inNewContactForm(new NewContactData("Vilen", "Proko", "2064 Arbor Springs Way Buford GA 30519", "5186189573"));
+    submitContactCreation();
+    return_toHomePage();
+    System.out.println("Created as well");
+
+
+  }
+
+  private void return_toHomePage() {
+    driver.findElement(By.linkText("home")).click();
+  }
+
+  private void submitContactCreation() {
+    driver.findElement(By.name("submit")).click();
+  }
+
+  private void fill_inNewContactForm(NewContactData newContactData) {
     driver.findElement(By.name("firstname")).click();
     driver.findElement(By.name("firstname")).clear();
-    driver.findElement(By.name("firstname")).sendKeys("Olga");
+    driver.findElement(By.name("firstname")).sendKeys(newContactData.getFirstName());
     driver.findElement(By.name("lastname")).click();
     driver.findElement(By.name("lastname")).clear();
-    driver.findElement(By.name("lastname")).sendKeys("Pro");
-    driver.findElement(By.name("photo")).click();
-    driver.findElement(By.name("photo")).clear();
-    driver.findElement(By.name("photo")).sendKeys("C:\\fakepath\\images.jpg");
+    driver.findElement(By.name("lastname")).sendKeys(newContactData.getLastName());
     driver.findElement(By.name("address")).click();
     driver.findElement(By.name("address")).clear();
-    driver.findElement(By.name("address")).sendKeys("2064 Arbor Springs Way\nBuford GA 30519");
+    driver.findElement(By.name("address")).sendKeys(newContactData.getAddress());
     driver.findElement(By.name("mobile")).click();
     driver.findElement(By.name("mobile")).clear();
-    driver.findElement(By.name("mobile")).sendKeys("5186189573");
-    driver.findElement(By.name("submit")).click();
-    driver.findElement(By.linkText("home")).click();
+    driver.findElement(By.name("mobile")).sendKeys(newContactData.getPhoneNumber());
+  }
+
+  private void initNewContactCreation() {
+    driver.findElement(By.linkText("add new")).click();
+  }
+
+  private void login(String username, String password) {
+    driver.get("http://localhost/addressbook/");
+    driver.findElement(By.name("user")).clear();
+    driver.findElement(By.name("user")).sendKeys(username);
+    driver.findElement(By.name("pass")).click();
+    driver.findElement(By.name("pass")).clear();
+    driver.findElement(By.name("pass")).sendKeys(password);
+    driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
   @AfterClass(alwaysRun = true)

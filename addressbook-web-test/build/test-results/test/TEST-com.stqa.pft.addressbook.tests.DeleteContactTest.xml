@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.stqa.pft.addressbook.tests.DeleteContactTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-26T00:43:51" hostname="DESKTOP-TPQRM92" time="0.624">
+  <properties/>
+  <testcase name="testDeleteContact" classname="com.stqa.pft.addressbook.tests.DeleteContactTest" time="0.624"/>
+  <system-out><![CDATA[Deleted
+]]></system-out>
+  <system-err><![CDATA[1650933827993	geckodriver	INFO	Listening on 127.0.0.1:52889
+1650933828265	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52509" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Olga\\AppData\\Local\\Temp\\rust_mozprofilecDau3S"
+1650933828570	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Olga\\AppData\\Local\\Temp\\rust_mozprofilecDau3S\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52509/devtools/browser/8c031012-1caf-4bfd-ba25-5db724d7d2fa
+1650933830435	Marionette	INFO	Listening on port 10605
+Read port: 10605
+1650933830511	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Apr 25, 2022 8:43:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1650933832098	Marionette	INFO	Stopped listening on port 10605
+]]></system-err>
+</testsuite>

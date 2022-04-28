@@ -29,31 +29,51 @@ public class CreateNewContactTest {
     //baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
       driver.get("http://localhost/addressbook/");
-      driver.findElement(By.name("user")).clear();
-      driver.findElement(By.name("user")).sendKeys("admin");
-      driver.findElement(By.name("pass")).click();
-      driver.findElement(By.name("pass")).clear();
-      driver.findElement(By.name("pass")).sendKeys("secret");
-      driver.findElement(By.xpath("//input[@value='Login']")).click();
+      login("admin", "secret");
+    }
+
+  private void login(String username, String password) {
+    driver.findElement(By.name("user")).clear();
+    driver.findElement(By.name("user")).sendKeys(username);
+    driver.findElement(By.name("pass")).click();
+    driver.findElement(By.name("pass")).clear();
+    driver.findElement(By.name("pass")).sendKeys(password);
+    driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
   @Test
   public void testCreateNewContact() throws Exception {
-    driver.findElement(By.linkText("add new")).click();
+    initContactCreation();
+    fill_inNewContactForm(new ContactData("Olga", "Pro", "2064 Arbor Way Buford GA 30519", "5186189573"));
+    submitContactCreation();
+    returnToHomePage();
+  }
+
+  private void returnToHomePage() {
+    driver.findElement(By.linkText("home")).click();
+  }
+
+  private void submitContactCreation() {
+    driver.findElement(By.name("submit")).click();
+  }
+
+  private void fill_inNewContactForm(ContactData contactData) {
     driver.findElement(By.name("firstname")).click();
     driver.findElement(By.name("firstname")).clear();
-    driver.findElement(By.name("firstname")).sendKeys("Olga");
+    driver.findElement(By.name("firstname")).sendKeys(contactData.firstName());
     driver.findElement(By.name("lastname")).click();
     driver.findElement(By.name("lastname")).clear();
-    driver.findElement(By.name("lastname")).sendKeys("Pro");
+    driver.findElement(By.name("lastname")).sendKeys(contactData.lastName());
     driver.findElement(By.name("address")).click();
     driver.findElement(By.name("address")).clear();
-    driver.findElement(By.name("address")).sendKeys("2064 Arbor Springs Way\nBuford GA 30519");
+    driver.findElement(By.name("address")).sendKeys(contactData.address());
     driver.findElement(By.name("mobile")).click();
     driver.findElement(By.name("mobile")).clear();
-    driver.findElement(By.name("mobile")).sendKeys("5186189573");
-    driver.findElement(By.name("submit")).click();
-    driver.findElement(By.linkText("home")).click();
+    driver.findElement(By.name("mobile")).sendKeys(contactData.phoneNumber());
+  }
+
+  private void initContactCreation() {
+    driver.findElement(By.linkText("add new")).click();
   }
 
   @AfterMethod(alwaysRun = true)

@@ -1,6 +1,14 @@
 .gradle
 /build/
 /tmp/
+.xml
+.class
+*~
+.*.swp
+.*.swo
+/. idea/
+**/.idea/workspace.xml 
+**/.idea/tasks.xml
 
 
 # Ignore Gradle GUI config

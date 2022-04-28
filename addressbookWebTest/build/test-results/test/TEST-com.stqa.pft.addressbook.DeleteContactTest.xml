@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.stqa.pft.addressbook.DeleteContactTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-28T03:44:13" hostname="DESKTOP-TPQRM92" time="0.843">
+  <properties/>
+  <testcase name="testDeleteContact" classname="com.stqa.pft.addressbook.DeleteContactTest" time="0.843"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1651117448735	geckodriver	INFO	Listening on 127.0.0.1:53727
+1651117448995	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50380" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Olga\\AppData\\Local\\Temp\\rust_mozprofilecB3epG"
+1651117449322	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Olga\\AppData\\Local\\Temp\\rust_mozprofilecB3epG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50380/devtools/browser/275d9053-3bae-471c-a764-bbff564e5629
+1651117451400	Marionette	INFO	Listening on port 8925
+Read port: 8925
+1651117451480	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Apr 27, 2022 11:44:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1651117452611	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1651117453743	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651117454068	Marionette	INFO	Stopped listening on port 8925
+]]></system-err>
+</testsuite>

@@ -27,20 +27,40 @@ public class DeleteGroupTest {
     //baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/group.php");
+    login("admin", "secret");
+  }
+
+  private void login(String username, String password) {
     driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
+    driver.findElement(By.name("user")).sendKeys(username);
     driver.findElement(By.name("pass")).click();
     driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
+    driver.findElement(By.name("pass")).sendKeys(password);
     driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
   @Test
   public void testDeleteGroup() throws Exception {
-    driver.findElement(By.linkText("groups")).click();
-    driver.findElement(By.name("selected[]")).click();
-    driver.findElement(By.name("delete")).click();
+    go_toGroupPage();
+    selectGroup();
+    deleteSelectedGroup();
+    returnToGroupPage();
+  }
+
+  private void returnToGroupPage() {
     driver.findElement(By.linkText("group page")).click();
+  }
+
+  private void deleteSelectedGroup() {
+    driver.findElement(By.name("delete")).click();
+  }
+
+  private void selectGroup() {
+    driver.findElement(By.name("selected[]")).click();
+  }
+
+  private void go_toGroupPage() {
+    driver.findElement(By.linkText("groups")).click();
   }
 
   @AfterClass(alwaysRun = true)

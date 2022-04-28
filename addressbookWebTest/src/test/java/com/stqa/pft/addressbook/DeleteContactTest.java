@@ -26,22 +26,38 @@ public class DeleteContactTest {
     //baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/");
+    login("admin", "secret");
+  }
+
+  private void login(String username, String password) {
     driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
+    driver.findElement(By.name("user")).sendKeys(username);
     driver.findElement(By.name("pass")).click();
     driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
+    driver.findElement(By.name("pass")).sendKeys(password);
     driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
   @Test
   public void testDeleteContact() throws Exception {
 
-    driver.findElement(By.name("selected[]")).click();
+    selectContact();
     acceptNextAlert = true;
-    driver.findElement(By.xpath("//input[@value='Delete']")).click();
-    assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+    deleteSelectedContact();
+    assertTrueContactDelete();
     //driver.findElement(By.linkText("home")).click();
+  }
+
+  private void assertTrueContactDelete() {
+    assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
+  }
+
+  private void deleteSelectedContact() {
+    driver.findElement(By.xpath("//input[@value='Delete']")).click();
+  }
+
+  private void selectContact() {
+    driver.findElement(By.name("selected[]")).click();
   }
 
   @AfterMethod(alwaysRun = true)

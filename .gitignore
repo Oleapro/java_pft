@@ -1,5 +1,7 @@
 .gradle
 /build/
+/tmp/
+
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -12,3 +14,4 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+addressbook-web-test/build/tmp/test/jar_extract_6504516715517153978_tmp

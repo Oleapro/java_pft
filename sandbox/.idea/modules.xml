@@ -5,6 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-web-test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-web-test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-web-test.test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbookWebTest.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbookWebTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbookWebTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbookWebTest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbookWebTest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbookWebTest.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.test.iml" />
     </modules>

@@ -5,34 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dee5f9f-2545-4e9d-b4f5-2f61bec7f246" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/CreateNewContactTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/CreateNewGroupTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/DeleteContactTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/DeleteGroupTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/addressbookWebTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/addressbookWebTest.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/addressbookWebTest.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/classes/java/test/com/stqa/pft/addressbook/appmanager/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/classes/java/test/com/stqa/pft/addressbook/appmanager/ApplicationManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/classes/java/test/com/stqa/pft/addressbook/tests/CreateNewContactTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/classes/java/test/com/stqa/pft/addressbook/tests/CreateNewContactTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/reports/tests/test/classes/com.stqa.pft.addressbook.tests.DeleteContactTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/reports/tests/test/classes/com.stqa.pft.addressbook.tests.DeleteContactTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/reports/tests/test/packages/com.stqa.pft.addressbook.tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/reports/tests/test/packages/com.stqa.pft.addressbook.tests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/TEST-com.stqa.pft.addressbook.tests.DeleteContactTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/TEST-com.stqa.pft.addressbook.tests.DeleteContactTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../addressbook-web-test/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../addressbook-web-test/src/test/java/com/stqa/pft/addressbook/tests/CreateNewContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-test/src/test/java/com/stqa/pft/addressbook/tests/CreateNewContactTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/addressbook-web-test.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewContactTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewContactTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewGroupTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewGroupTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteContactTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteContactTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteGroupTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteGroupTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/reports/tests/test/classes/com.stqa.pft.addressbook.DeleteContactTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/reports/tests/test/classes/com.stqa.pft.addressbook.DeleteContactTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/reports/tests/test/packages/com.stqa.pft.addressbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/reports/tests/test/packages/com.stqa.pft.addressbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/TEST-com.stqa.pft.addressbook.DeleteContactTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/TEST-com.stqa.pft.addressbook.DeleteContactTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/CreateNewContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/CreateNewContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/CreateNewGroupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/CreateNewGroupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/DeleteContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/DeleteContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/DeleteGroupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbookWebTest/src/test/java/com/stqa/pft/addressbook/DeleteGroupTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,21 +89,26 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Dev/java_pft/addressbook-web-test/src/test/java/com/stqa/pft/addressbook&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Dev/java_pft/addressbookWebTest/build.gradle&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_directory_selection": "C:/Dev/java_pft/addressbook-web-test/src/test/java/com/stqa/pft/addressbook",
+    "last_opened_file_path": "C:/Dev/java_pft/addressbookWebTest/build.gradle",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.stqa.pft.addressbook" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.CreateNewContactTest.testCreateNewContact (1)">
     <configuration name="CreateNewContactTest.testCreateNewContact (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -161,10 +156,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactTest.testDeleteContact (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteContactTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../addressbook-web-test" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../addressbookWebTest" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -174,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.stqa.pft.addressbook.tests.DeleteContactTest.testDeleteContact&quot;" />
+            <option value="&quot;com.stqa.pft.addressbook.DeleteContactTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -233,10 +228,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CreateNewContactTest.testCreateNewContact (1)" />
+        <item itemvalue="Gradle.DeleteContactTest.testDeleteContact" />
         <item itemvalue="Gradle.DeleteGroupTest.testDeleteGroup" />
         <item itemvalue="Gradle.CreateNewGroupTest.testCreateNewGroup" />
-        <item itemvalue="Gradle.DeleteContactTest.testDeleteContact" />
-        <item itemvalue="Gradle.DeleteContactTest.testDeleteContact (1)" />
+        <item itemvalue="Gradle.DeleteContactTest" />
       </list>
     </recent_temporary>
   </component>

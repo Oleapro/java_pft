@@ -23,3 +23,34 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 addressbook-web-test/build/tmp/test/jar_extract_6504516715517153978_tmp
+sandbox/.idea/workspace.xml
+addressbookWebTest/build/tmp/test/jar_extract_5290685309637772886_tmp
+addressbookWebTest/build/tmp/test/jar_extract_1036503060739915203_tmp
+addressbookWebTest/build/tmp/test/jar_extract_10491356800541879153_tmp
+addressbookWebTest/build/tmp/test/jar_extract_1118023112420933014_tmp
+addressbookWebTest/build/tmp/test/jar_extract_13717879696089535106_tmp
+addressbookWebTest/build/tmp/test/jar_extract_1545260670371531833_tmp
+addressbookWebTest/build/tmp/test/jar_extract_15870497063410220449_tmp
+addressbookWebTest/build/tmp/test/jar_extract_16693505885457823620_tmp
+addressbookWebTest/build/tmp/test/jar_extract_16900392807909434974_tmp
+addressbookWebTest/build/tmp/test/jar_extract_18050430834158516011_tmp
+*.bin
+*.bin
+addressbookWebTest/build/test-results/test/binary/output.bin
+addressbook-web-test/src/test/java/com/stqa/pft/addressbook/tests/CreateNewContactTest.java
+*.class
+*.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewContactTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewGroupTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteContactTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteGroupTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewContactTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewGroupTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteContactTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteGroupTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewContactTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewGroupTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/DeleteContactTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewGroupTest.class
+addressbookWebTest/build/classes/java/test/com/stqa/pft/addressbook/CreateNewContactTest.class
+addressbookWebTest/build/tmp/compileTestJava/previous-compilation-data.bin

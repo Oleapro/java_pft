@@ -8,10 +8,10 @@ public class DeleteContactTest extends  TestBase {
   @Test
   public void testDeleteContact() throws Exception {
 
-    selectContact();
-    acceptNextAlert = true;
-    deleteSelectedContact();
-    assertTrueContactDelete();
+    app.selectContact();
+    app.acceptNextAlert = true;
+    app.deleteSelectedContact();
+    app.assertTrueContactDelete();
     //driver.findElement(By.linkText("home")).click();
     //returnToGroupPage();
   }

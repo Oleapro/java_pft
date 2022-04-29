@@ -1,6 +1,5 @@
 package com.stqa.pft.addressbook;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class DeleteGroupTest extends TestBase{
@@ -8,10 +7,10 @@ public class DeleteGroupTest extends TestBase{
 
   @Test
   public void testDeleteGroup() throws Exception {
-    go_toGroupPage();
-    selectGroup();
-    deleteSelectedGroup();
-    returnToGroupPage();
+    app.go_toGroupPage();
+    app.selectGroup();
+    app.deleteSelectedGroup();
+    app.returnToGroupPage();
   }
 
 

@@ -1,5 +1,6 @@
-package com.stqa.pft.addressbook;
+package com.stqa.pft.addressbook.tests;
 
+import com.stqa.pft.addressbook.model.ContactData;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.fail;

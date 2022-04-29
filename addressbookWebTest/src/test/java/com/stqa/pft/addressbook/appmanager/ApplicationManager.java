@@ -1,5 +1,7 @@
-package com.stqa.pft.addressbook;
+package com.stqa.pft.addressbook.appmanager;
 
+import com.stqa.pft.addressbook.model.ContactData;
+import com.stqa.pft.addressbook.model.GroupData;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -13,7 +15,7 @@ public class ApplicationManager {
   public boolean acceptNextAlert = true;
   public StringBuffer verificationErrors = new StringBuffer();
 
-  protected void init() {
+  public void init() {
     driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get("http://localhost/addressbook/");
@@ -78,7 +80,7 @@ public class ApplicationManager {
     driver.findElement(By.name("selected[]")).click();
   }
 
-  protected void stop() {
+  public void stop() {
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

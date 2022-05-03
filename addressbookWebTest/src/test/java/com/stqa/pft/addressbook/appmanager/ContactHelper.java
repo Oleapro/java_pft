@@ -4,46 +4,58 @@ import com.stqa.pft.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ContactHelper {
-  public WebDriver driver;
+public class ContactHelper extends HelperBase{
 
   public boolean acceptNextAlert = true;
 
   public ContactHelper(WebDriver driver) {
-
-    this.driver = driver;
+    super(driver);
   }
 
   public void initContactCreation() {
-    driver.findElement(By.linkText("add new")).click();
+    click(By.linkText("add new"));
   }
 
   public void fill_inNewContactForm(ContactData contactData) {
-    driver.findElement(By.name("firstname")).click();
-    driver.findElement(By.name("firstname")).clear();
-    driver.findElement(By.name("firstname")).sendKeys(contactData.firstName());
-    driver.findElement(By.name("lastname")).click();
-    driver.findElement(By.name("lastname")).clear();
-    driver.findElement(By.name("lastname")).sendKeys(contactData.lastName());
-    driver.findElement(By.name("address")).click();
-    driver.findElement(By.name("address")).clear();
-    driver.findElement(By.name("address")).sendKeys(contactData.address());
-    driver.findElement(By.name("mobile")).click();
-    driver.findElement(By.name("mobile")).clear();
-    driver.findElement(By.name("mobile")).sendKeys(contactData.phoneNumber());
+    setFieldValue(By.name("firstname"), contactData.firstName());
+    setFieldValue(By.name("lastname"), contactData.lastName());
+    setFieldValue(By.name("address"), contactData.address());
+    setFieldValue(By.name("mobile"), contactData.phoneNumber());
   }
 
   public void submitContactCreation() {
-    driver.findElement(By.name("submit")).click();
+    click(By.name("submit"));
   }
 
+
   public void selectContact() {
-    driver.findElement(By.name("selected[]")).click();
+    click(By.name("selected[]"));
   }
 
   public void deleteSelectedContact() {
-    driver.findElement(By.xpath("//input[@value='Delete']")).click();
+    click(By.xpath("//input[@value='Delete']"));
   }
+
+  public void closeAlertAndGetItsText() {
+    driver.switchTo().alert().accept();
+    /*try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+
+  public void assertTrueContactDelete() {
+    assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));*/
+  }
+
 
 
 }

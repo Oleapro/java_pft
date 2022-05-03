@@ -1,11 +1,13 @@
 package com.stqa.pft.addressbook.appmanager;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
 public class ApplicationManager {
@@ -15,7 +17,7 @@ public class ApplicationManager {
   public GroupHelper groupHelper;
   public NavigationHelper navigationHelper;
   public ContactHelper contactHelper;
-  public boolean acceptNextAlert = true;
+
   public StringBuffer verificationErrors = new StringBuffer();
 
   public void init() {
@@ -54,25 +56,6 @@ public class ApplicationManager {
     } catch (NoAlertPresentException e) {
       return false;
     }
-  }
-
-  public String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
-  }
-
-  public void assertTrueContactDelete() {
-    assertTrue(closeAlertAndGetItsText().matches("^Delete 1 addresses[\\s\\S]$"));
   }
 
 

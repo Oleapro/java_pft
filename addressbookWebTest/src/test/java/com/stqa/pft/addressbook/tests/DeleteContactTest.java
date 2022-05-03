@@ -9,9 +9,9 @@ public class DeleteContactTest extends TestBase {
   public void testDeleteContact() throws Exception {
 
     app.getContactHelper().selectContact();
-    app.acceptNextAlert = true;
+    app.getContactHelper().acceptNextAlert = true;
     app.getContactHelper().deleteSelectedContact();
-    app.assertTrueContactDelete();
+    app.getContactHelper().closeAlertAndGetItsText();
     //app.getNavigationHelper().returnToHomePage();
 
   }

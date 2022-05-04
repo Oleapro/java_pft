@@ -3,7 +3,7 @@ package com.stqa.pft.addressbook.tests;
 import com.stqa.pft.addressbook.model.GroupData;
 import org.testng.annotations.Test;
 
-public class CreateNewGroupTest extends TestBase {
+public class CreateNewGroupTests extends TestBase {
 
 
   @Test
@@ -13,7 +13,7 @@ public class CreateNewGroupTest extends TestBase {
     app.getGroupHelper().initGroupCreation();
     app.getGroupHelper().fillNewGroupForm(new GroupData("NewGroup2", "test", "test"));
     app.getGroupHelper().submitGroupCreation();
-    app.getGroupHelper().returnToGroupPage();
+
   }
 
 }

@@ -3,6 +3,7 @@ package com.stqa.pft.addressbook.appmanager;
 import com.stqa.pft.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class ContactHelper extends HelperBase{
 
@@ -57,5 +58,19 @@ public class ContactHelper extends HelperBase{
   }
 
 
+  public void initContactMove() {
+    new Select(driver.findElement(By.name("to_group"))).selectByVisibleText("NewGroupTest");
 
+    driver.findElement(By.xpath("//div[@id='content']/form[2]/div[4]/select/option[7]")).click();
+
+
+  }
+
+  public void addContactToSelectedGroup() {
+    driver.findElement(By.name("add")).click();
+  }
+
+  public void goToGroupWithContactAdedPage() {
+    driver.findElement(By.linkText("group page \"NewGroupTest\"")).click();
+  }
 }

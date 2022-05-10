@@ -18,18 +18,13 @@ public class HelperBase {
 
   protected void setFieldValue(By locator, String text) {
     click(locator);
-    if (text != null) {
-      String existingText = driver.findElement(locator).getAttribute("value");
-      if (!text.equals(existingText)){
-        driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(text);
-      }
-    }
+    driver.findElement(locator).clear();
+    driver.findElement(locator).sendKeys(text);
   }
 
-  public boolean isElementPresent(By by) {
+  public boolean isElementPresent(By locator) {
     try {
-      driver.findElement(by);
+      driver.findElement(locator);
       return true;
     } catch (NoSuchElementException e) {
       return false;

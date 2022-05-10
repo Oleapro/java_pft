@@ -36,7 +36,7 @@ public class ApplicationManager {
       
     }
 
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     driver.get("http://localhost/addressbook/");
     groupHelper = new GroupHelper(driver);
     contactHelper = new ContactHelper(driver);

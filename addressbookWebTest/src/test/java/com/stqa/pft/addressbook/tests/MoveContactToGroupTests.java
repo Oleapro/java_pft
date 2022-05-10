@@ -8,7 +8,7 @@ public class MoveContactToGroupTests extends TestBase{
     app.getContactHelper().selectContact();
     app.getContactHelper().initContactMove();
     app.getContactHelper().addContactToSelectedGroup();
-    app.getContactHelper().goToGroupWithContactAdedPage();
+    app.getContactHelper().goToGroupWithContactAddedPage();
     app.getNavigationHelper().returnToHomePage();
 
   }

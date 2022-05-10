@@ -4,8 +4,9 @@ import com.stqa.pft.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
   public boolean acceptNextAlert = true;
 
@@ -17,11 +18,18 @@ public class ContactHelper extends HelperBase{
     click(By.linkText("add new"));
   }
 
-  public void fill_inNewContactForm(ContactData contactData) {
+  public void fill_inNewContactForm(ContactData contactData, boolean creation) {
     setFieldValue(By.name("firstname"), contactData.firstName());
     setFieldValue(By.name("lastname"), contactData.lastName());
     setFieldValue(By.name("address"), contactData.address());
     setFieldValue(By.name("mobile"), contactData.phoneNumber());
+
+    if (creation){
+      new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.group());
+    } else {
+      Assert.assertFalse(isElementPresent(By.name("new_group")));
+    }
+
   }
 
   public void submitContactCreation() {
@@ -60,10 +68,20 @@ public class ContactHelper extends HelperBase{
   public void initContactMove() {
     new Select(driver.findElement(By.name("to_group"))).selectByVisibleText("NewGroupTest");
   }
+
   public void addContactToSelectedGroup() {
     driver.findElement(By.name("add")).click();
   }
-  public void goToGroupWithContactAdedPage() {
+
+  public void goToGroupWithContactAddedPage() {
     driver.findElement(By.linkText("group page \"NewGroupTest\"")).click();
+  }
+
+  public void initContactModification() {click(By.cssSelector("img[alt='Edit']"));
+
+  }
+
+  public void submitContactModification() {
+    click(By.name("update"));
   }
 }

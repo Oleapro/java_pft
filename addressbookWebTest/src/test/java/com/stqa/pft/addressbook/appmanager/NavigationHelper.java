@@ -12,14 +12,18 @@ public class NavigationHelper extends HelperBase{
 
 
   public void go_toGroupPage() {
+    if (isElementPresent(By.tagName("h1"))
+            &&  driver.findElement(By.tagName("h1")).getText().equals("Groups")
+            && isElementPresent(By.name("new"))){
+      return;
+    }
     click(By.linkText("groups"));
   }
 
-  public void returnToHomePage() {
-    click(By.linkText("home"));
-  }
-
   public void goToHomePage() {
+    if (isElementPresent(By.id("maintable"))){
+
+    }
     click(By.linkText("home"));
   }
 }

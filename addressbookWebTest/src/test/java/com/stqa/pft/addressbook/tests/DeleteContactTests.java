@@ -12,7 +12,7 @@ public class DeleteContactTests extends TestBase {
     app.getContactHelper().acceptNextAlert = true;
     app.getContactHelper().deleteSelectedContact();
     app.getContactHelper().closeAlertAndGetItsText();
-    //app.getNavigationHelper().returnToHomePage();
+    app.getNavigationHelper().goToHomePage();
 
   }
 

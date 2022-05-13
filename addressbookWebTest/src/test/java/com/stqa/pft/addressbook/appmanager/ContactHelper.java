@@ -4,7 +4,6 @@ import com.stqa.pft.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class ContactHelper extends HelperBase {
 
@@ -24,11 +23,11 @@ public class ContactHelper extends HelperBase {
     setFieldValue(By.name("address"), contactData.address());
     setFieldValue(By.name("mobile"), contactData.phoneNumber());
 
-    if (creation){
-      new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.group());
-    } else {
-      Assert.assertFalse(isElementPresent(By.name("new_group")));
-    }
+//    if (creation){
+//      new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.group());
+//    } else {
+//      Assert.assertFalse(isElementPresent(By.name("new_group")));
+//    }
 
   }
 
@@ -66,7 +65,7 @@ public class ContactHelper extends HelperBase {
 
 
   public void initContactMove() {
-    new Select(driver.findElement(By.name("to_group"))).selectByVisibleText("NewGroupTest");
+    new Select(driver.findElement(By.name("to_group"))).selectByVisibleText("test1");
   }
 
   public void addContactToSelectedGroup() {
@@ -74,7 +73,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void goToGroupWithContactAddedPage() {
-    driver.findElement(By.linkText("group page \"NewGroupTest\"")).click();
+    driver.findElement(By.linkText("group page \"test1\"")).click();
   }
 
   public void initContactModification() {click(By.cssSelector("img[alt='Edit']"));
@@ -83,5 +82,21 @@ public class ContactHelper extends HelperBase {
 
   public void submitContactModification() {
     click(By.name("update"));
+  }
+
+  public void createContact(ContactData contact,boolean creation) {
+    initContactCreation();
+    fill_inNewContactForm(contact,true);
+    submitContactCreation();
+  }
+
+  public boolean isThereAContact() {
+    return (isElementPresent(By.name("selected[]")));
+  }
+
+  public void contactModification() {
+    initContactModification();
+    fill_inNewContactForm(new ContactData("Olga4", "Pro", "2064 Arbor Way Buford GA 30519", "5186189573", null), false);
+    submitContactModification();
   }
 }

@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-  protected final ApplicationManager app = new ApplicationManager(Browser.EDGE.browserName());
+  protected final ApplicationManager app = new ApplicationManager(Browser.CHROME.browserName());
 
 //  @BeforeClass
 //  public void setWebDriver() {
